@@ -1,4 +1,22 @@
-1) Sistemas embarcados são sistemas independêntes e de maior complexidade, a nível de um computador, mas dedicado a um propósito,
-  já os computadores são para usos geral.
+1) Sistemas embarcados são sistemas indepeneêntes e de maior complexidade, a nível de um computador, mas dedicado a um propósito
+  específico, já os computadores são para usos geral.
   
-2) 
+2) São sistemas programados para exercer uma função específica. Apresentam um processador que podem gerenciam memória, periféricos
+  e outros.
+  
+3)
+  a) Os carros hoje apresentação diversos elementos eletrônicos desde os sensores e atudores, sendo todos controlados por um sistema 
+    embarcados. Além disso, há os computadores de bordos.
+  b) Sistemas embardados podem ser usados para gerenciar e personalizar o funcionamento de alguns eletrodomésticos. Um exemplo 
+    interessante são as geladeiras inteligentes que apresentam interfaces para substituir anotações presas com imãs de geladeira,
+    bem como permitir que o usuário visualize o interior da geladeira remotamente.
+  c) Com a capacidade de um computador, os sistemas embarcados podem ser usados para o controle de maquinário sem a necessidade 
+    de uma pessoa, bem como a criação de uma interface para uso e de um processamento mais rápido. Por exemplo, seria possível 
+    gerenciar componentes de uma linha de montagem de um único dispositivo remoto.
+  
+4)Podem ser citadas as seguintes arquiteturas AVR, ARM, PowerPC, x86, entre outras. Cada uma possui suas particuladiras, as diferenças
+ são os tipos de memória, a construção do hardware, a otimização de funçoes específicas entre outras.
+ 
+5) O raspberry PI já foi desenvolvido inicialmente para promover acesso de estudantes a esse tipo de equipamento. Com o tempo
+  ele ganhou popularidade de hoje apresenta diversos recursos para promover o aprendizado e a aplicação do raspberry.
+  
