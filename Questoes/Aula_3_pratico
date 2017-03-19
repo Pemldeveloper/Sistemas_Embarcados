@@ -1,0 +1,22 @@
+1)
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  int main()
+  {
+    printf("Ola mundo!\n");
+    return 0;
+  }
+ 
+2)
+  int main()
+  {
+    char nome[20];
+    printf("Qual seu nome?\n");
+    scanf("%s", nome);
+    printf("Olá, %s!\n", nome);
+    return 0;
+  }
+  
+ 3)
+ 
