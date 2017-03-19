@@ -7,4 +7,15 @@ Questões da aula 2
 
 3) Shell, ou linha de comando é é uma ferramenta de interpretação de comandos.
 
-4)Permanecer constantemente em modo de super-usuário deixa o sistema vulnerável.
+4) Permanecer constantemente em modo de super-usuário deixa o sistema vulnerável.
+
+5) Tabulação(TAB)
+
+6) As setas, ctrl+r.
+
+7) 
+     a) help [comando}
+     b) ls -la
+     c) pwd
+     d) cd [pasta]
+     e) mkdir [pasta]
