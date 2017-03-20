@@ -86,7 +86,73 @@
     printf("\n");
     return 0;
   }
+  
+10)
+  //Makefile
+  Num_Caracs: main.o numcaracs.o
+    g++ $(CFLAGS) -o Num_Caracs main.o numcaracs.o
+  main.o: main.c numcaracs.hpp
+    gcc $(CFLAGS) -c main.c
+  numcaracs.o: numcaracs.cpp numcaracs.hpp
+    g++ $(CFLAGS) -c numcaracs.cpp
+  clean:
+    rm -f *.o Num_Caracs
 
+  // main.c na questão 9
 
+  // numcaracs.cpp na questão 8
 
- 
+  // Arquivo numcaracs.hpp
+  #ifdef __cplusplus
+  extern "C" {
+  #endif
+  extern int Num_Caracs(char *string);
+  #ifdef __cplusplus
+  }
+  #endif
+
+11)
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include "numcaracs.hpp"
+
+  int main(int argc, char *argv[])
+  {
+    int i;
+    int num;
+    printf("\n");
+    for(i=0;i<=(argc-1);i++)
+    {
+      num += Num_Caracs(argv[i]);
+    }
+    printf("Total de caracteres de entrada: %d\n", num);
+    printf("\n");
+    return 0;
+  }
+  
+12)
+  // Foi aproveitado o Makefile da questão 10. Editou-se apenas a função main.
+  
+  //Makefile
+  Num_Caracs: main.o numcaracs.o
+    g++ $(CFLAGS) -o Num_Caracs main.o numcaracs.o
+  main.o: main.c numcaracs.hpp
+    gcc $(CFLAGS) -c main.c
+  numcaracs.o: numcaracs.cpp numcaracs.hpp
+    g++ $(CFLAGS) -c numcaracs.cpp
+  clean:
+    rm -f *.o Num_Caracs
+
+  // main.c na questão 11
+
+  // numcaracs.cpp na questão 8
+
+  // Arquivo numcaracs.hpp
+  #ifdef __cplusplus
+  extern "C" {
+  #endif
+  extern int Num_Caracs(char *string);
+  #ifdef __cplusplus
+  }
+  #endif
+  
