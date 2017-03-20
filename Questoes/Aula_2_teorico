@@ -33,4 +33,4 @@ Questões da aula 2
      q) sort
      r)
      s) cmp [arquivo1] [arquivo2]
-     t)
+     t) echo [texto]
