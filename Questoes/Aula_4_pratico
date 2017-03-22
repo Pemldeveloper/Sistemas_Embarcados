@@ -1,0 +1,42 @@
+1)
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  int main()
+  {
+    FILE * arquivo;
+    arquivo = fopen("olamundo.txt", "w");
+    if(!arquivo)
+      printf("Erro na abertura do arquivo");
+    else
+      fprintf(arquivo, "OlÃ¡, Mundo");
+    fclose(arquivo);	
+    return 0;
+  }
+
+2)
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <string.h>
+
+  int main()
+  {
+    char nome[30];
+    int idade;
+    FILE *arquivo;
+    printf("\nDigite seu nome: ");
+    scanf("%s",nome);
+    printf("\nDigite sua idade: ");
+    scanf("%d", &idade);
+    char nome_arquivo[30];
+    strcpy(nome_arquivo, nome);
+    strcat(nome_arquivo, ".txt");
+
+    arquivo = fopen(nome_arquivo, "w");
+    if(!arquivo)
+      printf("Erro na abertura do arquivo");
+    else
+      fprintf(arquivo, "Nome: %s\nIdade: %d\n", nome, idade);
+    fclose(arquivo);	
+    return 0;
+  }
