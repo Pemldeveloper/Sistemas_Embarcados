@@ -1,1 +1,17 @@
 
+1)
+  a)fopen() e fclose()
+  b)fputs(), fprintf() e fwrite()
+  c)fread(), fscanf() e fgetc()
+  d)
+  e)stdlib.h
+  
+2) Posix é uma interface para permitir a portabilidade entre sistemas operacionais.
+
+3)
+  a) open e close
+  b) write
+  c) read
+  d) lseek
+  e) fcntl.h
+  
