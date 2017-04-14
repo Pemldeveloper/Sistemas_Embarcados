@@ -10,7 +10,7 @@
   {
     char *string = "Olá, Mundo!";
     int fd = open("/tmp/ola_mundo.txt", O_WRONLY | O_CREAT);
-    if(fd = -1)
+    if(fd == -1)
     {
       printf("Falha na abertura do arquivo");
       exit(1);
@@ -40,9 +40,32 @@
     sprintf(string, "Nome: %s\nIdade: %d", nome, idade);
     sprintf(nome_do_arquivo, "%s.txt", nome);
     int fd = open(nome_do_arquivo, O_WRONLY | O_CREAT);
+    if(fd == -1)
+    {
+      printf("Falha na abertura do arquivo");
+      exit(1);
+    }
     write(fd, string, (int)strlen(string));
     close(fd);
     return 0;
   }
   
 3)
+  int main(int argc, char *argv[])
+  {
+    char string[30];
+    char nome_do_arquivo[15];
+    sprintf(string, "Nome: %s\nIdade: %s", argv[1], argv[2]);
+    sprintf(nome_do_arquivo, "/tmp/%s.txt", argv[1]);
+    int fd = open(nome_do_arquivo, O_WRONLY | O_CREAT);
+    if(fd == -1)
+        {
+            printf("Falha na abertura do arquivo\n");
+          exit(1);
+      }
+    write(fd, string, (int)strlen(string));
+    close(fd);
+    return 0;
+  }
+
+4)
