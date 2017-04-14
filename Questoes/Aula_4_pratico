@@ -84,3 +84,40 @@
     fclose(arquivo);
     return tamanho;
   };
+  
+5)
+  // O vetor conteudo deve ser passado com um tamnho específico. 
+  // Se a memória for alocada dentro da função ela será liberada quando a função acabar.
+  
+  void le_arq_texto(char *nome_arquivo, char *conteudo)
+  {
+    FILE *arquivo;
+    arquivo = fopen(nome_arquivo, "r");
+    if(arquivo == NULL)
+    {
+      printf("Falha na abertura do arquivo\n");
+    }
+    else
+    {
+      char c;
+      int i = 0;
+      while((c=fgetc(arquivo)) != EOF)
+      {
+        conteudo[i]=c;
+        i++;
+      }
+    }
+    fclose(arquivo);
+  };
+  
+6)
+  void cat_falsificado(char *nome_do_arquivo)
+  {
+    int tamanho = tam_arq_texto(nome_do_arquivo);
+    char conteudo[tamanho];  //Novamente, é necessário saber o tamanho do vetor que será passado para a função le_arq_texto.
+    le_arq_texto(nome_do_arquivo, conteudo);
+    printf("conteudo do arquivo:\n%s\n", conteudo);
+  };
+  
+7)
+
