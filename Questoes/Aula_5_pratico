@@ -1,1 +1,48 @@
 
+1)
+  #include <stdio.h>
+  #include <fcntl.h>	// Para a funcao open()
+  #include <unistd.h>	// Para a funcao close()
+  #include <stdlib.h>	// Para a função exit()
+  #include <string.h>	// Para a função strlen()
+
+  int main()
+  {
+    char *string = "Olá, Mundo!";
+    int fd = open("/tmp/ola_mundo.txt", O_WRONLY | O_CREAT);
+    if(fd = -1)
+    {
+      printf("Falha na abertura do arquivo");
+      exit(1);
+    }
+    write(fd, string, (int)strlen(string))
+    close(fd);
+    return 0;
+  }
+  
+2)
+  #include <stdio.h>
+  #include <fcntl.h>	// Para a funcao open()
+  #include <unistd.h>	// Para a funcao close()
+  #include <stdlib.h>	// Para a função exit()
+  #include <string.h>	// Para a função strlen()
+
+  int main()
+  {
+    char nome[20];
+    int idade;
+    printf("\nNome: ");
+    scanf("%s", nome);
+    printf("\nidade: ");
+    scanf("%d", &idade);
+    char string[30];
+    char nome_do_arquivo[15];
+    sprintf(string, "Nome: %s\nIdade: %d", nome, idade);
+    sprintf(nome_do_arquivo, "%s.txt", nome);
+    int fd = open(nome_do_arquivo, O_WRONLY | O_CREAT);
+    write(fd, string, (int)strlen(string));
+    close(fd);
+    return 0;
+  }
+  
+3)
