@@ -1,0 +1,13 @@
+1) 
+  a)"ps -a"
+  b)"ps -u"
+  c)"ps aux --sort=-pcpu"
+  d)"ps -e -o pid,comm,etime", nesse caso seram listado os PID e os nomes dos comando, mas é possível listar só o nome e o tempo de execução.
+
+2) Fork() vem da língua inglesa e não possui um verbo equivalente no português, mas pode ser entendido como "garfar", no sentido de rasgar ou separa com um garfo.
+
+3)
+  a) A função system(), executa um processo dentro do um processo, ele é conveniente pela sinplicidade de usar, mas mantém o programa original esperando até o final da execução desse processo. O comando já cria um processo filho e o encarrega de executar o processo chamado, não há a necessidade de se preocupar com isso. Além disso a função system() pode escutar qualquer comando.
+  b) O fork() duplicara o processo original e o exec() substituirá o processo-filho por outro processo. A vantagem é que os processos ocorreram concorrentemente, entretanto isso poderá saturar de demandas o processador. A função exec() só pode executar programas executáveis (.exe).
+  
+4)
