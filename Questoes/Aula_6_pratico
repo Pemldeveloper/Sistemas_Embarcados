@@ -1,1 +1,44 @@
+1) 
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <sys/types.h>
+  #include <unistd.h>
 
+  int main()
+  {
+    pid_t pid;
+    int i;
+    for(i=0;i<3;i++)
+    {
+      pid = fork();
+      if(pid == 0)
+      {
+        printf("\nProcesso-filho %d. PID: %d\n", (i+1), (int)getpid());
+        break;
+      }
+      else
+      {
+        printf("\nProcesso pai criou processo-filho nº: %d\n", (i+1));
+      }	
+    }
+    return 0;
+  }
+
+2)
+  int main(int argc, char *argv[])
+  {
+    pid_t pid;
+    int i;
+    for(i=1;i<(argc);i++)
+    {
+      pid = fork();
+      if(pid == 0)
+      {
+        system(argv[i]);
+        break;
+      }	
+    }
+    return 0;
+  }
+  
+3)
