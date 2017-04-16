@@ -11,3 +11,11 @@
   b) O fork() duplicara o processo original e o exec() substituirá o processo-filho por outro processo. A vantagem é que os processos ocorreram concorrentemente, entretanto isso poderá saturar de demandas o processador. A função exec() só pode executar programas executáveis (.exe).
   
 4)
+
+5)
+  a) Aceita que o executável chamado esta no diretório atual.
+  b) Aceita que o novo programa tenha uma lista de argumentos nula.
+  c) Aceita argumento adicionais.
+  d) Pode executar um programa no diretório atual e sem argumentos.
+  e) A lista de argumento é nula, mas aceita argumentos adicionais.
+  f) Usa o mecanisno "var args[]" e aceita argumentos adicionais.
