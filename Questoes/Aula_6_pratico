@@ -42,3 +42,74 @@
   }
   
 3)
+
+4) A variável foi copiada pelos trẽs processos filhos, todos recebiam o mesmo valor do processo fai, zero, então cada um encrementava uma variável diferente, logo a função imprimiu igualmente o valor '1' pelos três processos filhos.
+
+  int v_global = 0; // Variavel global para este exemplo
+
+  void Incrementa_Variavel_Global(pid_t id_atual)
+  {
+    v_global++;
+    printf("ID do processo que executou esta funcao = %d\n", id_atual);
+    printf("v_global = %d\n", v_global);
+  }
+
+  int main()
+  {
+    pid_t pid;
+    int i;
+    for(i=0;i<3;i++)
+    {
+      pid = fork();
+      if(pid == 0)
+      {
+        Incrementa_Variavel_Global(getpid());
+        break;
+      }
+    }
+    return 0;
+  }
+  
+ 5) Nesse caso, o primeiro filho recebeu a variável com valor zero e a encrementou, o pai fez o mesmo. Agora como o segundo processo-filho clonou o pai após ele incrementar a variável global, o segundo filho recebeu a variável já incrementada pelo pai. O terceiro filho também clonou a variável global incrementada pelo pai, duas vezes. Logo os valores printados na tela foram: 
+      ID do processo que executou esta funcao = 9272 //Pai
+      ID do processo que executou esta funcao = 9273 //Filho 1
+      v_global = 1
+      v_global = 1
+      ID do processo que executou esta funcao = 9272 //Pai
+      ID do processo que executou esta funcao = 9274 //Filho 1
+      v_global = 2
+      v_global = 2
+      ID do processo que executou esta funcao = 9272 //Pai
+      ID do processo que executou esta funcao = 9275 //Filho 1
+      v_global = 3
+      v_global = 3
+
+ 
+   int v_global = 0; // Variavel global para este exemplo
+
+  void Incrementa_Variavel_Global(pid_t id_atual)
+  {
+    v_global++;
+    printf("ID do processo que executou esta funcao = %d\n", id_atual);
+    printf("v_global = %d\n", v_global);
+  }
+
+  int main()
+  {
+    pid_t pid;
+    int i;
+    for(i=0;i<3;i++)
+    {
+      pid = fork();
+      if(pid == 0)
+      {
+        Incrementa_Variavel_Global(getpid());
+        break;
+      }
+      else
+      {
+        Incrementa_Variavel_Global(getpid());
+      }
+    }
+    return 0;
+  }
