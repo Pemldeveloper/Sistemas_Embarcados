@@ -1,0 +1,7 @@
+1) Raspberry pi 3 - B, foi o mais fácil de comprar.
+
+2) Rasbian, pela facilidade de acesso e disponibilidade de conhecimentos sobre essa versão na internet
+
+3) O boot é feito por um cartão SD, onde é escrito uma imagem do OS.
+
+4) Como o projeto é conmposto de duas partes, o software do servidor e o software do cliente, o software do cliente é desenvlovido em uma máquina a parte. O servidor é desenvolvido no próprio Raspberry que já possui as ferramentas necessárias para isso, como compilador e editor de texto.
