@@ -1,0 +1,11 @@
+1) Raspbian, Ubunto, OSMC, Recalbox, Pidora e outros.
+
+2) Através de um boot por um cartão SD com a imagem do OS.
+
+3) 
+
+4) É possível programar remotamente usando uma chave SSH. É possível instalar software que fazer esse controle remotamente, etc.
+
+5) O OS que foi instalado já apresenta algumas ferramentas para programar em C no Raspberry, entre elas o Nano e o Vim. Nesses casos os comandos de compilação são feitos pelo terminal.
+
+6) O Raspbian já possui as ferramentas mnecessárias para programar em Python, como a IDLE pra Python, mas é possível programar direto pelo terminal.
